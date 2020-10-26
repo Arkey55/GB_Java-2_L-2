@@ -1,6 +1,6 @@
 package ru.geekbrains.lesson_2.exceptions;
 
-public class MyArrayDataException extends RuntimeException {
+public class MyArrayDataException extends Exception {
     public MyArrayDataException() {
     }
 

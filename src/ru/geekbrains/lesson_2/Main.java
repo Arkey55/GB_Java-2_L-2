@@ -1,13 +1,13 @@
 package ru.geekbrains.lesson_2;
 
 import ru.geekbrains.lesson_2.exceptions.MyArrayDataException;
-import ru.geekbrains.lesson_2.exceptions.MyArrayErrorException;
+import ru.geekbrains.lesson_2.exceptions.ErrorException;
 import ru.geekbrains.lesson_2.exceptions.MyArraySizeException;
 import ru.geekbrains.lesson_2.util.SumStringArray;
 
 public class Main {
 
-    public static void main(String[] args) throws MyArraySizeException, MyArrayDataException {
+    public static void main(String[] args) {
         String[][] goodArray = {{"7","2","3","9"},
                                 {"7","15","1","5"},
                                 {"8","1","2","3"},
@@ -32,10 +32,10 @@ public class Main {
             new SumStringArray().doSumUpArray(s);
         } catch (MyArraySizeException e) {
 //            System.out.println(e.getMessage());
-            throw new MyArrayErrorException("Error during array size check.", e);
+            throw new ErrorException("Error during array size check.", e);
         } catch (MyArrayDataException e) {
 //            System.out.println(e.getMessage());
-            throw new MyArrayErrorException("Error during array data check.", e);
+            throw new ErrorException("Error during array data check.", e);
         }
     }
 }

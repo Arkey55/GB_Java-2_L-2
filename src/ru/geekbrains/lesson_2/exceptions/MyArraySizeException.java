@@ -1,6 +1,6 @@
 package ru.geekbrains.lesson_2.exceptions;
 
-public class MyArraySizeException extends RuntimeException {
+public class MyArraySizeException extends Exception {
     public MyArraySizeException() {
     }
 
